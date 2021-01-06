@@ -209,6 +209,7 @@ export class LineChartComponent extends BaseChartComponent {
   @Input() xScaleMax: any;
   @Input() yScaleMin: number;
   @Input() yScaleMax: number;
+  @Input() margin: number[] = [10, 20, 10, 20];
 
   @Output() activate: EventEmitter<any> = new EventEmitter();
   @Output() deactivate: EventEmitter<any> = new EventEmitter();
@@ -230,7 +231,6 @@ export class LineChartComponent extends BaseChartComponent {
   clipPathId: string;
   series: any;
   areaPath: any;
-  margin = [10, 20, 10, 20];
   hoveredVertical: any; // the value of the x axis that is hovered over
   xAxisHeight: number = 0;
   yAxisWidth: number = 0;
